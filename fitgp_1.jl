@@ -4,7 +4,7 @@ function fitgp_1(t, x; iterations = 10, JITTER = 1e-6)
     # x are the inputs (here one-dimensional)
 
     # Initialise hyperparameters
-    logℓ, logα, logσ = 0.0, -0.5, 0.1
+    logℓ, logα, logσ = 0.0, 0.0, 0.0
    
     rbf(x, y, logℓ, logα) = exp(-abs2(x - y)*exp(logℓ))*exp(logα)
 
